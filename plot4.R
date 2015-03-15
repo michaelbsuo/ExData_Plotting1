@@ -13,7 +13,7 @@ dataset_sub$DateTime <- strptime(date_time, "%d/%m/%Y %H:%M:%S")
 png("plot4.png", height = 480, width = 480)
 par(mfrow = c(2, 2))
 with(dataset_sub, plot(DateTime, Global_active_power, type = "l", xlab = "", ylab = "Global Active Power"))
-with(dataset_sub, plot(DateTime, Voltage, type = "l", xlab = "", ylab = "Voltage"))
+with(dataset_sub, plot(DateTime, Voltage, type = "l", xlab = "datetime", ylab = "Voltage"))
 with(dataset_sub, {
         plot(DateTime, Sub_metering_1, type = "l", xlab = "", ylab = "Energy sub metering")
         lines(DateTime, Sub_metering_2, type = "l", col = "red")
